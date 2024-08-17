@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <style>
+        
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        margin: 0;
+      }
+      .container {
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 50%;
+      }
+      .heading {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .title {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .title input {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .edit-input {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .title button {
+        padding: 0% 6%;
+        border: none;
+        background-color: #28a745;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .title button:hover {
+        background-color: #218838;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+      }
+      .edited,
+      .delete,
+      .confirmed,
+      .backed {
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .edited:hover {
+        color: #007bff;
+      }
+      .delete:hover {
+        color: #dc3545;
+      }
+      .confirmed:hover {
+        color: #28a745;
+      }
+      .backed:hover {
+        color: #dc3545;
+      }
+      .right span {
+        display: flex;
+      }
+      .mylist {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+        border: 1px solid #ddd;
+        margin-bottom: 5px;
+      }
+
+      .task-checkbox {
+        margin-right: 10px;
+      }
+
+      .task-input,
+      .edit-input {
+        flex-grow: 1;
+      }
+
+      .button-container {
+        display: flex;
+        gap: 5px;
+      }
+
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <h1>My To-Do List</h1>
+      </div>
+      <div class="title">
+        <input type="text" name="text" id="task" placeholder="Task..." />
+        <button class="btn" id="add">Add</button>
+      </div>
+      <ul id="ul"></ul>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
